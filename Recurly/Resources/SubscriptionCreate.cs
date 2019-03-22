@@ -57,11 +57,11 @@ namespace Recurly.Resources {
     [JsonProperty("next_bill_date")]
     public DateTime? NextBillDate { get; set; }
   
-    /// <value>You must provide either a `plan_code` or `plan_id`. If both are provided the `plan_id` will be used.</value>
+    /// <value>Plan code</value>
     [JsonProperty("plan_code")]
     public string PlanCode { get; set; }
   
-    /// <value>You must provide either a `plan_code` or `plan_id`. If both are provided the `plan_id` will be used.</value>
+    /// <value>Plan ID</value>
     [JsonProperty("plan_id")]
     public string PlanId { get; set; }
   
