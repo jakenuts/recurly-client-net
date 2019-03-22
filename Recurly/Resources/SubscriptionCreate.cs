@@ -49,6 +49,10 @@ namespace Recurly.Resources {
     [JsonProperty("customer_notes")]
     public string CustomerNotes { get; set; }
   
+    /// <value>If present, this subscription's transactions will use the payment gateway with this code.</value>
+    [JsonProperty("gateway_code")]
+    public string GatewayCode { get; set; }
+  
     /// <value>Integer representing the number of days after an invoice's creation that the invoice will become past due. If an invoice's net terms are set to '0', it is due 'On Receipt' and will become past due 24 hours after it’s created. If an invoice is due net 30, it will become past due at 31 days exactly.</value>
     [JsonProperty("net_terms")]
     public int? NetTerms { get; set; }
@@ -77,13 +81,9 @@ namespace Recurly.Resources {
     [JsonProperty("renewal_billing_cycles")]
     public int? RenewalBillingCycles { get; set; }
   
-    /// <value>Create a shipping address on the account and assign it to the subscription.</value>
-    [JsonProperty("shipping_address")]
-    public Dictionary<string, string> ShippingAddress { get; set; }
-  
-    /// <value>Assign a shipping address from the account's existing shipping addresses. If this and `shipping_address` are both present, `shipping_address` will take precedence.</value>
-    [JsonProperty("shipping_address_id")]
-    public string ShippingAddressId { get; set; }
+    
+    [JsonProperty("shipping")]
+    public SubscriptionShippingCreate Shipping { get; set; }
   
     /// <value>If set, the subscription will begin in the future on this date. The subscription will apply the setup fee and trial period, unless the plan has no trial.</value>
     [JsonProperty("starts_at")]

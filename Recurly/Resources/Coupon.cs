@@ -80,6 +80,10 @@ namespace Recurly.Resources {
     [JsonProperty("name")]
     public string Name { get; set; }
   
+    /// <value>Plans</value>
+    [JsonProperty("plans")]
+    public List<PlanMini> Plans { get; set; }
+  
     /// <value>TODO</value>
     [JsonProperty("plans_names")]
     public List<string> PlansNames { get; set; }
