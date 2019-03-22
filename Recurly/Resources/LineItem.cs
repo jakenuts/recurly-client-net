@@ -77,7 +77,7 @@ namespace Recurly.Resources {
     /// Category to describe the role of a line item on a legacy invoice:
     /// - "charges" refers to charges being billed for on this invoice.
     /// - "credits" refers to refund or proration credits. This portion of the invoice can be considered a credit memo.
-    /// - "applied_credits" refers to previous credits applied to this invoice. See their original_line_item_id to determine where the credit first originated.
+    /// - "applied_credits" refers to previous credits applied to this invoice. See their `original_line_item_invoice_id` to determine where the credit first originated.
     /// - "carryforwards" can be ignored. They exist to consume any remaining credit balance. A new credit with the same amount will be created and placed back on the account.
     /// </value>
     [JsonProperty("legacy_category")]
