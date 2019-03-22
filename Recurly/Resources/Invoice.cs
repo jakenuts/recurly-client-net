@@ -19,7 +19,7 @@ namespace Recurly.Resources {
   
     
     [JsonProperty("address")]
-    public InvoiceAddress Address { get; set; }
+    public Address Address { get; set; }
   
     /// <value>The outstanding balance remaining on this invoice.</value>
     [JsonProperty("balance")]

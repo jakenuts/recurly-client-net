@@ -29,13 +29,9 @@ namespace Recurly.Resources {
     [JsonProperty("net_terms")]
     public int? NetTerms { get; set; }
   
-    /// <value>If you want to change to a new plan, you can provide the plan's code or id. If both are provided the `plan_id` will be used.</value>
+    /// <value>The plan code.</value>
     [JsonProperty("plan_code")]
     public string PlanCode { get; set; }
-  
-    /// <value>If you want to change to a new plan, you can provide the plan's code or id. If both are provided the `plan_id` will be used.</value>
-    [JsonProperty("plan_id")]
-    public string PlanId { get; set; }
   
     /// <value>For manual invoicing, this identifies the PO number associated with the subscription.</value>
     [JsonProperty("po_number")]

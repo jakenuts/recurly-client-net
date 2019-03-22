@@ -17,10 +17,6 @@ namespace Recurly.Resources {
     [JsonProperty("code")]
     public string Code { get; set; }
   
-    /// <value>Setting this field allows you to reference an existing add-on.</value>
-    [JsonProperty("id")]
-    public string Id { get; set; }
-  
     /// <value>Optionally override the default quantity.</value>
     [JsonProperty("quantity")]
     public int? Quantity { get; set; }
