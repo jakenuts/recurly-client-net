@@ -27,6 +27,5 @@ namespace Recurly {
         [EnumMember(Value = "unavailable_in_api_version")] UnavailableInApiVersion,
         [EnumMember(Value = "unknown_api_version")] UnknownApiVersion,
         [EnumMember(Value = "validation")] Validation,
-        [EnumMember(Value = "missing_feature")] MissingFeature,
       }
 }

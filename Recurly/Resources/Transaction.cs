@@ -33,10 +33,6 @@ namespace Recurly.Resources {
     [JsonProperty("collected_at")]
     public DateTime? CollectedAt { get; set; }
   
-    /// <value>The method by which the payment was collected.</value>
-    [JsonProperty("collection_method")]
-    public string CollectionMethod { get; set; }
-  
     /// <value>Created at</value>
     [JsonProperty("created_at")]
     public DateTime? CreatedAt { get; set; }
@@ -89,6 +85,10 @@ namespace Recurly.Resources {
     [JsonProperty("invoice")]
     public InvoiceMini Invoice { get; set; }
   
+    /// <value>If this transaction pays (`type=payment`) for or refunds (`type=refund`) an invoice, this will be the invoice's ID. It will be null for verification (`type=verify`) transactions.</value>
+    [JsonProperty("invoice_id")]
+    public string InvoiceId { get; set; }
+  
     /// <value>IP address's country</value>
     [JsonProperty("ip_address_country")]
     public string IpAddressCountry { get; set; }
@@ -115,7 +115,7 @@ namespace Recurly.Resources {
     [JsonProperty("payment_gateway")]
     public Dictionary<string, string> PaymentGateway { get; set; }
   
-    /// <value>Payment method (TODO: this overlaps with BillingInfo’s payment_method but only documents credit cards)</value>
+    /// <value>Payment method (TODO: this overlaps with BillinInfo’s payment_method but only documents credit cards)</value>
     [JsonProperty("payment_method")]
     public Dictionary<string, string> PaymentMethod { get; set; }
   
@@ -135,21 +135,15 @@ namespace Recurly.Resources {
     [JsonProperty("status_message")]
     public string StatusMessage { get; set; }
   
-    /// <value>If the transaction is charging or refunding for one or more subscriptions, these are their IDs.</value>
-    [JsonProperty("subscription_ids")]
-    public List<string> SubscriptionIds { get; set; }
+    /// <value>If the transaction is charging or refunding for a subscription, this is its ID.</value>
+    [JsonProperty("subscription_id")]
+    public string SubscriptionId { get; set; }
   
     /// <value>Did this transaction complete successfully?</value>
     [JsonProperty("success")]
     public bool? Success { get; set; }
   
-    /// <value>
-    /// - `authorization` – verifies billing information and places a hold on money in the customer's account.
-    /// - `capture` – captures funds held by an authorization and completes a purchase.
-    /// - `purchase` – combines the authorization and capture in one transaction.
-    /// - `refund` – returns all or a portion of the money collected in a previous transaction to the customer.
-    /// - `verify` – a $0 or $1 transaction used to verify billing information which is immediately voided.
-    /// </value>
+    /// <value>Transaction type</value>
     [JsonProperty("type")]
     public string Type { get; set; }
   
@@ -160,10 +154,6 @@ namespace Recurly.Resources {
     /// <value>Voided at</value>
     [JsonProperty("voided_at")]
     public DateTime? VoidedAt { get; set; }
-  
-    
-    [JsonProperty("voided_by_invoice")]
-    public InvoiceMini VoidedByInvoice { get; set; }
   
   }
 }

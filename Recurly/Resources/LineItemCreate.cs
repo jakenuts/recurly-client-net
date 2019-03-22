@@ -13,10 +13,6 @@ namespace Recurly.Resources {
   [ExcludeFromCodeCoverage] 
   public class LineItemCreate : Request {
   
-    /// <value>The reason the credit was given when line item is `type=credit`. When the Credit Invoices feature is enabled, the value can be set and will default to `general`. When the Credit Invoices feature is not enabled, the value will always be `null`.</value>
-    [JsonProperty("credit_reason_code")]
-    public string CreditReasonCode { get; set; }
-  
     /// <value>3-letter ISO 4217 currency code.</value>
     [JsonProperty("currency")]
     public string Currency { get; set; }
