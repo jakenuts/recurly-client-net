@@ -77,7 +77,7 @@ namespace Recurly.Resources {
     /// Category to describe the role of a line item on a legacy invoice:
     /// - "charges" refers to charges being billed for on this invoice.
     /// - "credits" refers to refund or proration credits. This portion of the invoice can be considered a credit memo.
-    /// - "applied_credits" refers to previous credits applied to this invoice. See their original_line_item_id to determine where the credit first originated.
+    /// - "applied_credits" refers to previous credits applied to this invoice. See their `original_line_item_invoice_id` to determine where the credit first originated.
     /// - "carryforwards" can be ignored. They exist to consume any remaining credit balance. A new credit with the same amount will be created and placed back on the account.
     /// </value>
     [JsonProperty("legacy_category")]
@@ -150,10 +150,6 @@ namespace Recurly.Resources {
     /// <value>`true` exempts tax on charges, `false` applies tax on charges. If not defined, then defaults to the Plan and Site settings. This attribute does not work for credits (negative line items). Credits are always applied post-tax. Pre-tax discounts should use the Coupons feature.</value>
     [JsonProperty("tax_exempt")]
     public bool? TaxExempt { get; set; }
-  
-    
-    [JsonProperty("tax_info")]
-    public TaxInfo TaxInfo { get; set; }
   
     /// <value>`true` if the line item is taxable, `false` if it is not.</value>
     [JsonProperty("taxable")]

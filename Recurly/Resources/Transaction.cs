@@ -143,13 +143,7 @@ namespace Recurly.Resources {
     [JsonProperty("success")]
     public bool? Success { get; set; }
   
-    /// <value>
-    /// - `authorization` – verifies billing information and places a hold on money in the customer's account.
-    /// - `capture` – captures funds held by an authorization and completes a purchase.
-    /// - `purchase` – combines the authorization and capture in one transaction.
-    /// - `refund` – returns all or a portion of the money collected in a previous transaction to the customer.
-    /// - `verify` – a $0 or $1 transaction used to verify billing information which is immediately voided.
-    /// </value>
+    /// <value>Transaction type</value>
     [JsonProperty("type")]
     public string Type { get; set; }
   
@@ -160,10 +154,6 @@ namespace Recurly.Resources {
     /// <value>Voided at</value>
     [JsonProperty("voided_at")]
     public DateTime? VoidedAt { get; set; }
-  
-    
-    [JsonProperty("voided_by_invoice")]
-    public InvoiceMini VoidedByInvoice { get; set; }
   
   }
 }
