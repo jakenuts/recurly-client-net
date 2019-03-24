@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Recurly.Test
 {
-    public class AccountAcquisitionTest : BaseTest
+    public class AccountAcquisitionTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void FindNonExistentAccountAcquisition()

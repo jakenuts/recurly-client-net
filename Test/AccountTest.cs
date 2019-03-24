@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Recurly.Test
 {
-    public class AccountTest : BaseTest
+    public class AccountTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void CreateAccount()

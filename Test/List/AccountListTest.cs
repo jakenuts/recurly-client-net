@@ -5,7 +5,7 @@ using AccountState = Recurly.Account.AccountState;
 
 namespace Recurly.Test
 {
-    public class AccountListTest : BaseTest
+    public class AccountListTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void List()

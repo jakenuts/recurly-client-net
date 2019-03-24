@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Recurly.Test
 {
-    public class InvoiceTest : BaseTest
+    public class InvoiceTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void GetInvoice()

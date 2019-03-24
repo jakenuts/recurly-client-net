@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Recurly.Test
 {
-    public class PlanListTest : BaseTest
+    public class PlanListTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void ListPlans()

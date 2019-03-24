@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Recurly.Test
 {
-    public class SubscriptionTest : BaseTest
+    public class SubscriptionTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public Subscription LookupSubscription()

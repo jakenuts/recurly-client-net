@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Recurly.Test
 {
-    public class TransactionTest : BaseTest
+    public class TransactionTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void LookupTransaction()

@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Recurly.Test
 {
-    public class CouponTest : BaseTest
+    public class CouponTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
         [RecurlyFact(TestEnvironment.Type.Integration)]
         public void ListCoupons()

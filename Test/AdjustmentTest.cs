@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Recurly.Test
 {
-    public class AdjustmentTest : BaseTest
+    public class AdjustmentTest : BaseTest, IClassFixture<SecurityProtocolFixture>
     {
 
         [RecurlyFact(TestEnvironment.Type.Integration)]
