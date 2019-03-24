@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recurly", "Library\Recurly.csproj", "{CA094233-B9A7-4700-A70A-3401E14070B9}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recurly", "Library\Recurly.csproj", "{CA094233-B9A7-4700-A70A-3401E14070B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recurly.Test", "Test\Recurly.Test.csproj", "{A610420B-4FEB-4590-A4B4-2926B4E52F47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recurly.Test", "Test\Recurly.Test.csproj", "{A610420B-4FEB-4590-A4B4-2926B4E52F47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7BC331AE-9147-44E7-8AAF-7830EE0C8585}"
+	ProjectSection(SolutionItems) = preProject
+		Publishing Package.txt = Publishing Package.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BD94523-8C00-4084-9A81-C4E9BDD288E9}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,1 @@
+nuget.exe push -Source "Gbase Package Feed" -ApiKey AzureDevOps recurly-api-client-netstd.2.0.0.nupkg
